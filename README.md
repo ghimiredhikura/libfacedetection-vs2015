@@ -1,13 +1,39 @@
-# libfacedetection
+# libfacedetection-vs2015
 
-This is a binary library for face detection and face landmark detection in images. 
-The 32-bit and 64-bit dll files are provided.
-To achieve better performance, the 64-bit dll is recommended.
+This is ready to use vs2015 version of the original libfacedetect - [https://github.com/ShiqiYu/libfacedetection](https://github.com/ShiqiYu/libfacedetection).  
+You can use this libfacedetection-vs2015 to detect face in image/images/webcam and also for benchmarking face detection performance in AFW,PASCAL,FDDB,UFDD and WIDER face dataset. 
 
-examples/libfacedetect-example.cpp and examples/libfacedetectcnn-example.cpp shows how to use the library.
+#### 1. Test webcam
+```
+$libfacedetection.exe -mode=0 -webcam=0
+```
+#### 2. Test single image
+```
+$libfacedetection.exe -mode=1 -path=../image/1.jpg
+```
+#### 3. Test image lists
+```
+$libfacedetection.exe -mode=2 -path=../image/
+```
+#### 4. Evaluation in benchmark dataset, detection files will be stored in "detections" folder. 
+```
+a) afw dataset
+$libfacedetection.exe -mode=3 -dataset=AFW -path=/path/to/afw/dataset/
 
-![Examples](/images/cnnresult.png "Detection example")
+b) PASCAL dataset
+$libfacedetection.exe -mode=3 -dataset=PASCAL -path=/path/to/pascal/dataset/
 
+c) FDDB dataset
+$libfacedetection.exe -mode=3 -dataset=FDDB -path=/path/to/fddb/dataset/
+
+d) WIDER_val dataset
+#libfacedetection.exe -mode=3 -dataset=WIDER_VAL -path=/path/to/wider/validation/dataset/
+
+e) UFDD dataset
+#libfacedetection.exe -mode=3 -dataset=UFDD -path=/path/to/UFDD/validation/dataset/
+```
+
+## Benchmarking results
 
 CNN-based Face Detection on Windows
 -------------
