@@ -33,8 +33,6 @@ e) UFDD dataset
 #libfacedetection.exe -mode=3 -dataset=UFDD -path=/path/to/UFDD/validation/dataset/
 ```
 
-## Benchmarking results
-
 CNN-based Face Detection on Windows
 -------------
 
